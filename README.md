@@ -25,7 +25,7 @@ This project is a Kanban Board application, which helps you manage your tasks an
    - On larger screens, tasks are displayed in three columns.
    - On smaller screens, tasks stack vertically for a better mobile experience.
 
-3. **GitHub Integration:**
+3. **GitHub I
    - You can contact the project author via a provided GitHub link.
    - The "Author" button in the application links to the project author's GitHub profile.
 
@@ -35,4 +35,3 @@ This project is a Kanban Board application, which helps you manage your tasks an
 3. Manage tasks by moving them between different stages.
 4. Click on the "Repository Link" button to contact the project author via GitHub.
 
-Feel free to customize the URLs in the links to point to your actual project website and GitHub repository.
