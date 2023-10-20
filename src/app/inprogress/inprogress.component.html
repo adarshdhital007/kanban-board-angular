@@ -1,0 +1,12 @@
+<div class="task card mb-3">
+  <div class="card-body">
+    <h4 class="card-title">{{ task.name }}</h4>
+    <div class="card-text">
+      <span class="font-weight-bold text-warning">Status: In Progress</span>
+    </div>
+    <p class="card-text"><b>Description:</b> {{ task.description }}</p>
+    <button class="btn btn-success border border-dark" (click)="moveTaskToDone(task)">
+      Move to Done
+    </button>
+  </div>
+</div>

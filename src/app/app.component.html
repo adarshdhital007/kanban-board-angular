@@ -1,0 +1,71 @@
+<div class="container my-4">
+  <h1 class="text-center">Kanban Board</h1>
+  <div class="container text-center mb-3">
+    <button class="btn btn-primary mr-2" (click)="openAddTaskForm()">
+      Add Task
+    </button>
+    <a
+      href="https://github.com/adarshdhital007"
+      target="_blank"
+      class="btn btn-secondary"
+    >
+      Repository Link
+    </a>
+  </div>
+
+  <div class="modal" id="addTaskModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title text-center">Add Task</h5>
+          <button
+            type="button"
+            class="close"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <app-add-task-form (taskAdded)="addTask($event)"></app-add-task-form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card mb-3">
+        <div class="card-header bg-primary text-white">To Do</div>
+        <div class="card-body">
+          <div *ngFor="let task of getTasks('todo')">
+            <app-todo [task]="task"></app-todo>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card mb-3">
+        <div class="card-header bg-warning text-white">In Progress</div>
+        <div class="card-body">
+          <div *ngFor="let task of getTasks('inprogress')">
+            <app-in-progress [task]="task"></app-in-progress>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card mb-3">
+        <div class="card-header bg-success text-white">Done</div>
+        <div class="card-body">
+          <div *ngFor="let task of getTasks('done')">
+            <app-done [task]="task"></app-done>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

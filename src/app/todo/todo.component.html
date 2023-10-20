@@ -1,0 +1,16 @@
+<div class="task card mb-3">
+  <div class="card-body">
+    <h4 class="card-title">{{ task.name }}</h4>
+    <div class="card-text">
+      <span class="font-weight-bold text-danger">Status: To Do</span>
+    </div>
+    <p class="card-text"><b>Description:</b> {{ task.description }}</p>
+    <button
+      class="btn btn-success border border-dark"
+      (click)="moveTaskToInProgress(task)"
+      *ngIf="task.status === 'todo'"
+    >
+      Move to In Progress
+    </button>
+  </div>
+</div>
