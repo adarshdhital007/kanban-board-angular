@@ -14,7 +14,7 @@ export class TaskService {
         1,
         'Angular Adventure',
         'todo',
-        "Every line of angular code feels like caffiene to me!"
+        "Every line of angular code feels like caffeine to me!"
       ),
       new Task(
         2,
@@ -26,7 +26,7 @@ export class TaskService {
         3,
         'User-Friendly Design',
         'inprogress',
-        "Bootstrap is"
+        "Bootstrap is key for me to go."
       ),
       new Task(
         4,
